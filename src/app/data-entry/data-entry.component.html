@@ -1,0 +1,55 @@
+
+<div style="margin-top: 10px;"> </div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="card">
+                <div class="card-header" style="background-color: brown;color: white;" align="center">
+                    STUDENT DETAILS
+                </div>        
+                <div class="card-body">
+                    <div style="margin-top: 10px;"> </div>
+                    <div>
+                        Photo: 
+                        <input #profileImageInput
+                            type="file"
+                            accept="image/*"
+                            (change)="processProfileImage($event)">
+                    </div>
+                </div>
+                <div class="card-header">
+                        Student Data
+                </div>
+                <div class="card-body">
+                    <input class="form-control" placeholder="School" type="text" [(ngModel)]="schoolName" disabled>
+                    <div style="margin-top: 10px;"> </div>
+                    <input class="form-control" placeholder="Student Name" type="text" [(ngModel)]="studentName" >
+                    <div style="margin-top: 10px;"> </div>
+                    <input class="form-control" placeholder="Class" type="text" [(ngModel)]="studentClass" >
+                    <div style="margin-top: 10px;"> </div>
+                    <input class="form-control" placeholder="Admn No" type="text" [(ngModel)]="admissionNumber" >
+                    <div style="margin-top: 10px;"> </div>
+                    <input class="form-control" placeholder="Date of Birth" type="text" [(ngModel)]="dateOfBirth" >
+                    <div style="margin-top: 10px;"> </div>
+                    <input class="form-control" placeholder="Contact Number" type="text" [(ngModel)]="studentContactNumber" >
+                    <div style="margin-top: 10px;"> </div>
+                    <input class="form-control" placeholder="Blood Group" type="text" [(ngModel)]="studentBloodGroup" >
+                    <div style="margin-top: 10px;"> </div>
+                </div>        
+                
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6" style="padding-left:32%">
+                            <div align="left"><button (click)="clearData($event)" class="btn btn-secondary">Clear</button></div> 
+                        </div>
+                        <div class="col-6" style="padding-left:8%">
+                            <div align="left"><button (click)="process($event)" class="btn btn-success">Submit</button></div>     
+                        </div>
+                    </div>        
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
